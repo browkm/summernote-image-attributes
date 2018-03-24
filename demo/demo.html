@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/summernote/dist/summernote-bs4.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../node_modules/summernote/dist/summernote-bs4.js"></script>
+    <script src="../summernote-image-attributes.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label class="form-label" for="body">Body</label>
+                <textarea name="body" id="body" cols="30" rows="10" class="form-control post-body" placeholder="Body"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.post-body').summernote({
+            focus: false,
+            dialogsFade: true,
+            height: 300,
+            toolbar: [
+                ['font', ['style', 'bold', 'italic', 'underline', 'strikethrough', 'superscript', 'clear']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['height', ['height']],
+                ['table', ['table']],
+                ['insert', ['picture', 'link']],
+                ['view', ['fullscreen', 'codeview']],
+                ['misc', ['undo', 'redo', 'help']]
+            ],
+            popover: {
+                image: [
+                    ['imagesize', ['imageSize100', 'imageSize50', 'imageSize25']],
+                    ['float', ['floatLeft', 'floatRight', 'floatNone']],
+                    ['custom', ['imageAttributes']],
+                    ['remove', ['removeMedia']]
+                ]
+            },
+            codemirror: { // codemirror options
+                theme: 'tomorrow-night-bright',
+                htmlMode: true,
+                lineNumbers: true,
+                mode: 'text/html'
+            }
+        });
+    });
+</script>
+</body>
+</html>
