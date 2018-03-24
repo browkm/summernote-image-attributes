@@ -4,6 +4,19 @@
   "description": "Summernote plugin to edit image attributes",
   "main": "summernote-image-attributes.js",
   "author": "DiemenDesign",
+  "license" : "MIT",
+  "keywords": [
+    "summernote",
+    "image",
+    "img",
+    "bootstrap",
+    "jquery",
+    "attributes"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dsvllc/summernote-image-attributes"
+  },
   "devDependencies": {
     "popper.js": "^1.14.1",
     "bootstrap": "^4.0.0",
